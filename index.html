@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="center">
+        <h1>Word Game</h1>
+    </div>
+    <div class="center">
+        <div style="padding: 1em;">
+            <label id="name" class="wordsEnter">Enter Words Below:</label><br>
+            <input type="text" value="" id="item" class="myText" onfocus="this.value=''"
+                style="width:300px;height:35px;font-size: larger;"><br>
+            <div class="theError">
+
+            </div>
+        </div>
+        <div style="padding-left: 1em;">
+            <button button id="button" type="button" class="button-primary addBtn" style="width:106px;">Add
+                Words</button>
+        </div>
+        <div style="padding: 2em;">
+            <div class="row">
+                <div style="padding-top: 1em;" class="wordsEnter">
+                    <span>Words Entered: <span class="wordsEntered"></span></span>
+                </div>
+                <div class="col-12">
+                    <span>count <span class="wordsCount"></span></span>
+                </div>
+            </div>
+            <div>
+                <div style="padding-top: 1em;" class="wordsEnter">
+                    <span>Shortest Word: <span class="short"></span></span>
+                </div>
+                <div class="col-12">
+                        <span>count2 <span class="wordsCount2"></span></span>
+                    </div>
+            </div>
+            <div style="padding-top: 1em;" class="wordsEnter">
+                <span>Longest Word: <span class="long"></span></span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="wordFact.js"></script>
+<script src="word.js"></script>
+
+</html>
