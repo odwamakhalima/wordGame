@@ -1,36 +1,47 @@
 function wordGame() {
-    var myList = []
+    var myList = [];
     var myCheckLong = 0;
     var myEmpty = '';
-    var error = ''
+    var addWord;
+    var error = '';
+    var shortest = '';
+    var words = ['offline','online','debonairs','Studio','javascript','buildings','Workshops','Software','Github','Golden','Mentors','Activities','Samsung','uberEats','geography','science','laptop','jesse', 'odwa', 'khanyiso', 'jason', 'codex','pizza','siwe','iviwe','makho','tabang','andre']
+
+
     var regex = /(\+|\-)?[0-9!@#$%^&*();,.?"^$:^\d+=/${/'}`''"\[.*?\]|<>]/i
 
-    function myError(){
+    function myError() {
         return error
     }
+
+
     function wordAdd(word) {
         error = ''
-        var addWord = word.toUpperCase().trim()
+         addWord = word.toUpperCase().trim()
 
         var myTest = regex.test(addWord)
-        if(myTest == false){
-        myList = addWord.split(' ');
-        if(addWord.length <=0){
-            error = 'Please enter Words!!'
+        if (myTest == false) {
+            myList = addWord.split(' ');
+            if (addWord.length <= 0) {
+                error = 'Please enter Words!!'
+            }
         }
-    }
-    else{
-        error = 'Please Enter Correct Words'
-    }
+        else {
+            error = 'Please Enter Correct Words'
+        }
 
     }
 
-    function all(){
+    function all() {
         for (var i = 0; i < myList.length; i++) {
             myEmpty = myList[i]
-           
         }
-        return myList
+        return myList.join(' ')
+    }
+
+    function count1() {
+        if(myList   )
+        return myList.length
     }
 
 
@@ -45,23 +56,41 @@ function wordGame() {
         return myEmpty
     }
 
-    function shortestWord() {
-
-        var shortest = myList.reduce((shortestWord, currentWord) => {
-            return currentWord.length < shortestWord.length ? currentWord : shortestWord;
-          }, myList[0]);
-          return shortest;
+    function count2() {
+        return myEmpty.length
     }
 
+    function shortestWord() {
+        if(myList.length>0){
+        shortest = myList.reduce((shortestWord, currentWord) => {
+            return currentWord.length < shortestWord.length ? currentWord : shortestWord;
+        }, myList[0]);
+    }
+        return shortest;
+    }
 
+    function count3() {
+        return shortest.length
+    }
+
+function myRan(){
+    for(var i = 0; i < 4; i++) {
+        var all = words[Math.floor(Math.random() * words.length)]
+        myList.push(all)
+        }
+       return myList.join(' ')
+}
 
     return {
         add: wordAdd,
         allEntered: all,
         myLong: longestWord,
         myShort: shortestWord,
-        errorM:myError
-
+        errorM: myError,
+        allCount: count1,
+        longCount: count2,
+        shortCount: count3,
+        ranWords: myRan
     }
 
 }
