@@ -65,6 +65,7 @@ function wordGame() {
             return currentWord.length < shortestWord.length ? currentWord : shortestWord;
         }, myList[0]);
     }
+    console.log(shortest.length)
         return shortest;
     }
 
