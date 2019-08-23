@@ -18,10 +18,18 @@ function add() {
 
     factoryWord.add(myText.value)
 
-    wordsEntered.innerHTML = 'Names Entered Are:  ' + factoryWord.allEntered()
+    if(factoryWord.allCount() > 01){
+        wordsEntered.innerHTML = 'Names Entered Are:  ' + factoryWord.allEntered()
+    }
+ 
+   
+
+        short.innerHTML = factoryWord.myShort() + ' Is The Shortest word With ' + factoryWord.shortCount() + ' Letters';
+    
+
+        long.innerHTML = factoryWord.myLong() + ' Is The Longest word With ' + factoryWord.longCount() + ' Letters';
+    
     clearError()
-    short.innerHTML = factoryWord.myShort() + ' Is The Shortest word With ' + factoryWord.shortCount() + ' Letters';
-    long.innerHTML = factoryWord.myLong() + ' Is The Longest word With ' + factoryWord.longCount() + ' Letters';
     errors.innerHTML = factoryWord.errorM()
     
 }
