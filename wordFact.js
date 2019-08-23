@@ -5,8 +5,7 @@ function wordGame() {
     var addWord;
     var error = '';
     var shortest = '';
-    var words = ['offline','online','debonairs','Studio','javascript','buildings','Workshops','Software','Github','Golden','Mentors','Activities','Samsung','uberEats','geography','science','laptop','jesse', 'odwa', 'khanyiso', 'jason', 'codex','pizza','siwe','iviwe','makho','tabang','andre']
-
+    var words = ['processing','offline','online','debonairs','Studio','javascript','buildings','Workshops','Software','Github','Golden','Mentors','Activities','Samsung','uberEats','geography','science','laptop','jesse', 'odwa', 'khanyiso', 'jason', 'codex','pizza','siwe','iviwe','makho','tabang','andre']
 
     var regex = /(\+|\-)?[0-9!@#$%^&*();,.?"^$:^\d+=/${/'}`''"\[.*?\]|<>]/i
 
